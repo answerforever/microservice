@@ -2,9 +2,8 @@ package com.answer.auth.common.util.jwt;
 
 import java.io.Serializable;
 
-
 /**
- * JWT信息
+ * Created by ace on 2017/9/10.
  */
 public class JWTInfo implements Serializable, IJWTInfo {
     private String username;

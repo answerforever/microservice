@@ -1,6 +1,8 @@
 package com.answer.auth.common.constants;
 
-
+/**
+ * Created by ace on 2017/8/29.
+ */
 public class CommonConstants {
     public final static String RESOURCE_TYPE_MENU = "menu";
     public final static String RESOURCE_TYPE_BTN = "button";

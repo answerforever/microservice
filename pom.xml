@@ -9,6 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>answer-auth</module>
+        <module>answer-auth</module>
     </modules>
     <packaging>pom</packaging>
 

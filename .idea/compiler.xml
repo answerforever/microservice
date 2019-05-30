@@ -7,20 +7,20 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="answer-admin" />
+        <module name="answer-auth-common" />
         <module name="answer-common" />
+        <module name="answer-auth-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="ace-auth" target="1.8" />
-      <module name="answer-auth" target="1.8" />
       <module name="answer-auth-common" target="1.8" />
-      <module name="answer-auth-server" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="answer-admin" options="-parameters" />
-      <module name="answer-auth" options="" />
+      <module name="answer-auth" options="-parameters" />
       <module name="answer-auth-common" options="-parameters" />
       <module name="answer-auth-server" options="-parameters" />
       <module name="answer-common" options="-parameters" />
