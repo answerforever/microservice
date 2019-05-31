@@ -1,0 +1,54 @@
+spring:
+  application:
+    name: answer-auth
+  redis:
+    database: 2
+    host: ${REDIS_HOST:localhost}
+    port: ${REDIS_PORT:6379}
+    pool:
+    max-active: 20
+  datasource:
+    name: test
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/ag_auth_v1?useUnicode=true&characterEncoding=UTF8
+    username: root
+    password: 123456
+    # 使用druid数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  mybatis:
+    basepackage: com.answer.auth.server.mapper
+    xmlLocation: classpath:mapper/**/*.xml
+    mapper-locations: "classpath*:mapper/*.xml"
+  server:
+    port: 9777 #启动端口
+jwt:
+  token-header: Authorization
+  expire: 14400
+  rsa-secret: xx1WET12^%3^(WE45
+client:
+  id: ace-auth
+  secret: 123456
+  token-header: x-client-token
+  expire: 14400
+  rsa-secret: x2318^^(*WRYQWR(QW&T
+logging:
+  level:
+    #        tk.mybatis: DEBUG
+    com.answer.auth.server: DEBUG

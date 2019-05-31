@@ -82,6 +82,11 @@
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.github.answerforever</groupId>
+            <artifactId>answer-auth-common</artifactId>
+        </dependency>
+
     </dependencies>
 
 </project>
